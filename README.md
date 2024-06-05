@@ -1,7 +1,8 @@
 This library (work in progress) defines functions for working with
 arbitrary sized bit-vectors.  The library has two sets of algorithms:
-    * the "small" representation for sizes [1 .. 64] uses `uint64_t`
-    * the "large" representation for sizes [65 .. ) uses an array of `uint32_t`
+
+  * the "small" representation for sizes [1 .. 64] uses `uint64_t`
+  * the "large" representation for sizes [65 .. ) uses an array of `uint32_t`
 
 All functions in the library have an explicit parameter specifying
 the widths of the bit-vectors involved.
