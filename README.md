@@ -16,7 +16,7 @@ directly with the value.
 Bit-vectors that do not fit in a representation type exactly, are placed
 in the *most significant* bits of the representation, with the least
 significant unused bits set to 0.   Essentially, if `x` is an `N`-bit vector
-(`N <= 64`), it will be represented as `x * 2^(64-N)` (aka `x << (64-N)`).
+(`1 <= N <= 64`), it will be represented as `x * 2^(64-N)` (aka `x << (64-N)`).
 The same holds for large bit-vectors, where the least significant element
 of the representation array may contain up to 31 bits of padding.
 This is useful, because it allows many operations to be performed
