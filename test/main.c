@@ -1,15 +1,10 @@
-#include <stdio.h>
 #include "small_bits.h"
+#include <stdio.h>
 
 int main(int argc, char* argv[]) {
-  for (size_t w = 1; w < 16; ++w) {
-    uint64_t m = 1 << (w-1);
-    for (uint64_t i = 0; i < m; ++i) {
-      uint64_t x = small_from64(w,i);
-      for (uint64_t mo = 1; mo < m; ++mo) {
-        uint64_t y = small_from64(w,mo);
-      }
-    }
-  }
+  size_t w = 5;
+  uint64_t a = small_from64(w,UINT64_C(-16));
+  uint64_t b = small_from64(w,UINT64_C(-1));
+  printf("%ld\n", small_to_i64(w,small_sdiv(w,a,b)));
   return 0;
 }
